@@ -10,7 +10,7 @@ section{width:100%;}
             flex-direction:column;
             justify-content:space-around;}
     .menuitem{width:100%; height:45px; background:#b7b7b7;}
-        .menuitem a{height:100%; border-radius:0px !important;}
+        .menuitem a{height:100%; border-radius:0px !important; transition:background .2s ease;}
 #right{position:relative; width:60%; height:100%; background:#e2e2e2;}
     #logo{ position:relative; left:15%; width:450px; height:230px; margin-top:125px; background:url(../img/logo.png);}
     #logo .menuitem{position:absolute; width:250px; margin-left:100px; bottom:-60px;}
@@ -26,7 +26,7 @@ section{width:100%;}
 .diamond{position:relative; color:white; text-align:center; height:130px; width:130px; margin:50px; z-index:1;}
 .diamond:hover:before{border-bottom-color:#c2c2c2;}
 .diamond:hover:after{border-top-color:#c2c2c2;}
-    .diamond:before, .diamond:after{content:''; position:absolute; width:0px; height:0px; margin:-50px; border:115px solid transparent; z-index:-1;}
+    .diamond:before, .diamond:after{content:''; position:absolute; width:0px; height:0px; margin:-50px; border:115px solid transparent; z-index:-1; pointer-events: none;  transition:all .4s ease;}
     .diamond:before{left:0px; top:0px; border-top-width:0px; border-bottom-color:#e2e2e2;}
     .diamond:after{left:0px; top:115px; border-bottom-width:0px; border-top-color:#e2e2e2;}
 .diamondcontent{height:100%; width:100%; line-height:40px; width:100%; display:flex; flex-direction:column; justify-content:center;}
