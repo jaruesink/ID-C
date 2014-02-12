@@ -21,12 +21,6 @@ section{width:100%;}
 #team header{margin:40px; text-align:center; color:#e2e2e2; font-size:90px; font-family: arial;}
 #diamondwrapper{position:relative;}
 .diamondrow{display:flex; flex-direction:row; justify-content:center;}
-    .diamondrow:nth-child(2){position:relative; top:-113px;}
-    .diamondrow:nth-child(3){position:relative; top:-226px;}
-.diamond{position:relative; color:white; text-align:center; height:130px; width:130px; margin:50px; z-index:1;}
-.diamond:hover:before{border-bottom-color:#c2c2c2;}
-.diamond:hover:after{border-top-color:#c2c2c2;}
-    .diamond:before, .diamond:after{content:''; position:absolute; width:0px; height:0px; margin:-50px; border:115px solid transparent; z-index:-1; pointer-events: none;  transition:all .4s ease;}
-    .diamond:before{left:0px; top:0px; border-top-width:0px; border-bottom-color:#e2e2e2;}
-    .diamond:after{left:0px; top:115px; border-bottom-width:0px; border-top-color:#e2e2e2;}
-.diamondcontent{height:100%; width:100%; line-height:40px; width:100%; display:flex; flex-direction:column; justify-content:center;}
+.diamond{position:relative; color:white; text-align:center; height:165px; width:165px; margin:35px 35px -80px 38px; background:#e2e2e2; -webkit-transform: rotate(45deg); display:flex; flex-direction:row; justify-content:center; align-items:center; flex-shrink:0; transition:all .4s ease;}
+.diamond:hover{background:#b7b7b7;}
+.diamondcontent{height:120px; width:120px; line-height:40px; display:flex; flex-direction:column; justify-content:center; -webkit-transform: rotate(-45deg);}
