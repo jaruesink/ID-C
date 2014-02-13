@@ -1,13 +1,17 @@
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}#top{width: 100%; height:500px;}
 
-body{font-family: arial;}
+/*Page Styles*/
+body{font-family: arial; background:#e2e2e2;}
 section{width:100%; position:relative;}
-header{margin:60px 20px 40px 0px; font-size:120px; font-family: "nimbus-sans",sans-serif;  font-weight:bold;}
-.sectionwrapper{width:930px; margin:0px auto;}
-.arrow-down{position:absolute; bottom:-34px; width:0px; height:0px; border-left:35px solid transparent; border-right:35px solid transparent; z-index:1;}
+section:nth-of-type(odd){background:#e2e2e2;}
+    section:nth-of-type(odd) header{color:white;}
+section:nth-of-type(even){background:white;}
+    section:nth-of-type(even) header{color:#e2e2e2;}
+.sectionwrapper{width:920px; margin:0px auto; padding:60px 0px 40px 0px;}
+header{margin:0px 20px; width:100%; height:auto; font-size:120px; font-family: "nimbus-sans",sans-serif;  font-weight:bold; text-align:center;}
 
-#top{background:#e2e2e2;}
+/*Top Section*/
 #left{position:relative; width:40%; height:100%; background:#cdcdcd;}
     #menu{height:80%; position:relative; top:10%; right:10%; width:250px;}
     #menu ul,li{text-indent:none; margin:0px !important;}
@@ -20,39 +24,94 @@ header{margin:60px 20px 40px 0px; font-size:120px; font-family: "nimbus-sans",sa
 #right{position:relative; width:60%; height:100%; background:#e2e2e2;}
     #logo{position:relative; left:15%; width:450px; height:230px; margin-top:125px; background:url(../img/logo.png);}
     #logo .menuitem{position:absolute; width:250px; left:100px; bottom:-60px;}
-    #top .arrow-down{border-top: 35px solid #e2e2e2; right:10%;}
 
-#team header{text-align:center; color:#e2e2e2;}
+/*Team Section*/
 #team header span{position:relative; top:-20px;}
-#diamondwrapper{height:500px;}
-.diamondrow{position:relative; height:235px;
+
+/*Service Section*/
+#services header{text-align:right; margin-top:-60px;}
+#services header span{position:relative; top:5px; left:-20px;}
+#services img{margin:40px auto 20px auto; width:920px; height:250px;}
+
+/*Contact Section*/
+
+/*Footer Section*/
+footer div{text-align:center; color:white; font-size:80px; font-family: "nimbus-sans", sans-serif;}
+
+/*Helper Classes*/
+.hide-text{text-indent: 100%; white-space: nowrap; overflow: hidden;}
+.smaller{font-size:56px; line-height:56px;}
+
+/*Page Arrows*/
+.pagearrow{position:absolute; bottom:-34px; width:0px; height:0px; border-left:35px solid transparent; border-right:35px solid transparent; z-index:1;}
+.pagearrow.left{left:10%;}
+.pagearrow.right{right:10%}
+.pagearrow.gray{border-top: 35px solid #e2e2e2;}
+.pagearrow.white{border-top: 35px solid white;}
+
+/*Drop Shadows*/
+.diamond{-moz-box-shadow: 1px 0px 1px 0px #000; -webkit-box-shadow: 1px 0px 1px 0px #000; box-shadow: 1px 0px 1px 0px #000;}
+
+/*Diamond CSS*/
+
+    /*contain height*/
+    #diamondwrapper{height:500px; margin-top:40px;}
+
+    /*establish rows*/
+    .diamondrow{
+                position:relative; height:235px;
+                display:-moz-box; display:-ms-flexbox; display:-webkit-flex; display:flex;  
+               -moz-box-flex-direction:row; -ms-flex-direction:row; -webkit-flex-direction:row; flex-direction:row;
+                -webkit-justify-content:center; justify-content:center;
+                }
+
+    /*condense row elements*/
+    .diamondrow:nth-child(2) .diamond{margin-top:-79px;}
+    .diamondrow:nth-child(3) .diamond{margin-top:-194px;}
+
+    /*diamond style*/
+    .diamond{
+            position:relative; height:165px; width:165px;
+            background:url(../img/profiles.jpg) #e2e2e2; 
+            color:white;
+            margin:35px 35px 0px 38px;
+            -webkit-transform:rotate(45deg); transform:rotate(45deg); 
             display:-moz-box; display:-ms-flexbox; display:-webkit-flex; display:flex;  
-           -moz-box-flex-direction:row; -ms-flex-direction:row; -webkit-flex-direction:row; flex-direction:row;
-            -webkit-justify-content:center; justify-content:center;}
-.diamondrow:nth-child(2) .diamond{margin-top:-79px;}
-.diamondrow:nth-child(3) .diamond{margin-top:-194px;}
-.diamond{position:relative; color:white; text-align:center; height:165px; width:165px; margin:35px 35px 0px 38px; background:url(../img/profiles.jpg) #e2e2e2; -webkit-transform:rotate(45deg); transform:rotate(45deg); 
-            display:-moz-box; display:-ms-flexbox; display:-webkit-flex; display:flex;  
-           -moz-box-flex-direction:column; -ms-flex-direction:column; -webkit-flex-direction:column; flex-direction:column;
+            -moz-box-flex-direction:column; -ms-flex-direction:column; -webkit-flex-direction:column; flex-direction:column;
             -webkit-justify-content:center; justify-content:center;
             -moz-box-flex-shrink:0; -ms-flex-shrink:0; -webkit-flex-shrink:0; flex-shrink:0;
-    transition:all .4s ease; cursor:pointer;
-}
-.diamondcontent{height:100%; width:100%; line-height:20px;   
-display:-moz-box; display:-ms-flexbox; display:-webkit-flex; display:flex;  
-           -moz-box-flex-direction:column; -ms-flex-direction:column; -webkit-flex-direction:column; flex-direction:column;
-            -webkit-justify-content:center; justify-content:center;
-            -moz-box-flex-shrink:0; -ms-flex-shrink:0; -webkit-flex-shrink:0; flex-shrink:0;
-    opacity:0; background:rgba(0,0,0,0.7); transition:all .4s ease;
-}
-.diamondcontent div{width:100%; text-align:center; -webkit-transform:rotate(-45deg); transform:rotate(-45deg);   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility:    hidden;
-  -ms-backface-visibility:     hidden;
-    backface-visibility:hidden;    
-}
-.diamondcontent span:nth-of-type(1){font-weight:bold; font-size:18px;}
-.diamondcontent span:nth-of-type(2){font-size:14px;}
-.diamond:hover .diamondcontent{opacity:1;}
+            transition:all .4s ease;
+            cursor:pointer;
+            }
+
+    /*inner diamond content style*/
+    .diamondcontent{
+                    height:100%; width:100%;
+                    line-height:20px;
+                    background:rgba(0,0,0,0.7);
+                    display:-moz-box; display:-ms-flexbox; display:-webkit-flex; display:flex;  
+                    -moz-box-flex-direction:column; -ms-flex-direction:column; -webkit-flex-direction:column; flex-direction:column;
+                    -webkit-justify-content:center; justify-content:center;
+                    -moz-box-flex-shrink:0; -ms-flex-shrink:0; -webkit-flex-shrink:0; flex-shrink:0;
+                    opacity:0; transition:all .4s ease;
+                    }
+    
+    /*cancel rotation for content*/
+    .diamondcontent div{
+                        width:100%;
+                        text-align:center;
+                        -webkit-transform:rotate(-45deg); transform:rotate(-45deg);
+                        -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; backface-visibility:hidden;    
+                        }
+
+    /*text style of inner diamond content*/
+    .diamondcontent span:nth-of-type(1){font-weight:bold; font-size:18px;}
+    .diamondcontent span:nth-of-type(2){font-size:14px;}
+
+    /*hover state*/
+    .diamond:hover .diamondcontent{opacity:1;}
+
+    /*establish background sprites*/
     #alex{background-position:0px 0px;}
     #coulton{background-position:0px -165px;}
     #jake{background-position:0px -330px;}
@@ -63,29 +122,3 @@ display:-moz-box; display:-ms-flexbox; display:-webkit-flex; display:flex;
     #brittney{background-position:0px -1155px;}
     #maggie{background-position:0px -1320px;}
     #drew{background-position:0px -1485px;}
-    #team .arrow-down{border-top: 35px solid white; bottom:-95px; left:10%;}
-
-#services{background:#e2e2e2; min-height:500px;}
-#services header{text-align:right; color:white;}
-#services header span{position:relative; top:5px; left:-20px;}
-
-
-
-
-
-/*Helper Classes*/
-.hide-text {
-text-indent: 100%;
-white-space: nowrap;
-overflow: hidden;
-}
-
-.smaller{font-size:56px;}
-
-/*Drop Shadows*/
-.diamond
-{
--moz-box-shadow:    1px 0px 1px 0px #000;
-  -webkit-box-shadow: 1px 0px 1px 0px #000;
-  box-shadow:         1px 0px 1px 0px #000;
-}
