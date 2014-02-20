@@ -11,6 +11,7 @@ section:nth-of-type(even){background:white;}
 .sectionwrapper{width:920px; margin:0px auto; padding:60px 0px 40px 0px;}
 header{margin:0px 20px; width:100%; height:auto; font-size:120px; font-family: "nimbus-sans",sans-serif;  font-weight:bold; text-align:center;}
 
+
 /*Top Section*/
 #left{position:relative; width:40%; height:100%; background:#cdcdcd;}
     #menu{height:80%; position:relative; top:10%; right:10%; width:250px;}
@@ -25,6 +26,9 @@ header{margin:0px 20px; width:100%; height:auto; font-size:120px; font-family: "
     #logo{position:relative; left:15%; width:450px; height:230px; margin-top:125px; background:url(../img/logo.png);}
     #logo .menuitem{position:absolute; width:250px; left:100px; bottom:-60px;}
 
+/*NavBar*/
+.navbar{display:none; position:fixed; top:10px; width:100%; background:white; border-radius:0px;}
+
 /*Team Section*/
 #team header span{position:relative; top:-20px;}
 
@@ -33,10 +37,16 @@ header{margin:0px 20px; width:100%; height:auto; font-size:120px; font-family: "
 #services header span{position:relative; top:5px; left:-20px;}
 #services img{margin:40px auto 20px auto; width:920px; height:250px;}
 
-/*Contact Section*/
+/*Work Section*/
+#work header{text-align:left; margin-top:-60px;}
+#work header span{position:relative; top:5px; left:20px;}
+#work img{margin:40px auto 20px auto; width:920px; height:250px;}
+
+/*Connect Section*/
 
 /*Footer Section*/
-footer div{text-align:center; color:white; font-size:80px; font-family: "nimbus-sans", sans-serif;}
+footer{width:100%; background:white;}
+footer div{text-align:center; color:#e2e2e2; font-size:80px; font-family: "nimbus-sans", sans-serif;}
 
 /*Helper Classes*/
 .hide-text{text-indent: 100%; white-space: nowrap; overflow: hidden;}
