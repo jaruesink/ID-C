@@ -1,0 +1,14 @@
+{
+    "members": [
+        {"name":"Jake Ruesink", "position":"Group Leader", "description":"this is Jake"},
+        {"name":"Tyler Jo Pearce", "position":"Human Resources", "description":"this is Tyler Jo"},
+        {"name":"Alex Riba", "position":"Project Manager", "description":"this is Alex"},
+        {"name":"Maggie Curtis", "position":"Account Manager", "description":"this is Maggie"},
+        {"name":"Drew Williams", "position":"Art Director", "description":"this is Drew"},
+        {"name":"Melissa Huisman", "position":"Art Director", "description":"this is Melissa"},
+        {"name":"Brittney Eason", "position":"Designer", "description":"this is Brittney"},
+        {"name":"Hillary Gee", "position":"Designer", "description":"this is Hillary"},
+        {"name":"Coulton Vento", "position":"Developer", "description":"this is Coulton"},
+        {"name":"Derek Wene", "position":"Developer", "description":"this is Derek"}
+    ]
+}

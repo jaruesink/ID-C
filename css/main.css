@@ -62,7 +62,10 @@ footer div{text-align:center; color:#e2e2e2; font-size:80px; font-family: "nimbu
 /*Drop Shadows*/
 .diamond{-moz-box-shadow: 1px 0px 1px 0px #000; -webkit-box-shadow: 1px 0px 1px 0px #000; box-shadow: 1px 0px 1px 0px #000;}
 
-/*Diamond CSS*/
+/*Member Info Styles*/
+#memberinfo{display:none;}
+
+/*Diamond Styles*/
 
     /*contain height*/
     #diamondwrapper{height:500px; margin-top:40px;}
@@ -82,7 +85,7 @@ footer div{text-align:center; color:#e2e2e2; font-size:80px; font-family: "nimbu
     /*diamond style*/
     .diamond{
             position:relative; height:165px; width:165px;
-            background:url(../img/profiles.jpg) #e2e2e2; 
+            background:url(../img/profiles.jpg) #808080; 
             color:white;
             margin:35px 35px 0px 38px;
             -webkit-transform:rotate(45deg); transform:rotate(45deg); 
@@ -103,7 +106,7 @@ footer div{text-align:center; color:#e2e2e2; font-size:80px; font-family: "nimbu
                     -moz-box-flex-direction:column; -ms-flex-direction:column; -webkit-flex-direction:column; flex-direction:column;
                     -webkit-justify-content:center; justify-content:center;
                     -moz-box-flex-shrink:0; -ms-flex-shrink:0; -webkit-flex-shrink:0; flex-shrink:0;
-                    opacity:0; transition:all .4s ease;
+                    opacity:0; transition:all .2s ease; -webkit-transition:all .2s ease;
                     }
     
     /*cancel rotation for content*/
@@ -111,7 +114,6 @@ footer div{text-align:center; color:#e2e2e2; font-size:80px; font-family: "nimbu
                         width:100%;
                         text-align:center;
                         -webkit-transform:rotate(-45deg); transform:rotate(-45deg);
-                        -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; backface-visibility:hidden;    
                         }
 
     /*text style of inner diamond content*/
@@ -122,13 +124,14 @@ footer div{text-align:center; color:#e2e2e2; font-size:80px; font-family: "nimbu
     .diamond:hover .diamondcontent{opacity:1;}
 
     /*establish background sprites*/
-    #alex{background-position:0px 0px;}
-    #coulton{background-position:0px -165px;}
-    #jake{background-position:0px -330px;}
-    #hillary{background-position:0px -495px;}
-    #melissa{background-position:0px -660px;}
-    #derek{background-position:0px -825px;}
-    #tylerjo{background-position:0px -990px;}
-    #brittney{background-position:0px -1155px;}
-    #maggie{background-position:0px -1320px;}
-    #drew{background-position:0px -1485px;}
+    .alex{background-position:0px 0px;}
+    .coulton{background-position:0px -165px;}
+    .jake{background-position:0px -330px;}
+    .hillary{background-position:0px -495px;}
+    .melissa{background-position:0px -660px;}
+    .derek{background-position:0px -825px;}
+    .tylerjo{background-position:0px -990px;}
+    .brittney{background-position:0px -1155px;}
+    .maggie{background-position:0px -1320px;}
+    .drew{background-position:0px -1485px;}
+
