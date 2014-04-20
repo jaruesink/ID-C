@@ -26,6 +26,7 @@
                     </div>
                     <div id="right" class="col-sm-8">
                         <div id="logo"><img src="img/logo.png" alt="ID+C Professional Group"></div>
+                        testing deployment
                     </div>
                 </div>
             </div>
