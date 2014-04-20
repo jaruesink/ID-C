@@ -2,7 +2,7 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}#top{width: 100%; height:500px;}
 
 /*Page Styles*/
-body{font-family: arial; background:#e2e2e2;}
+body{font-family: arial; background:#e2e2e2; font-family: 'Lato', sans-serif; -webkit-font-smoothing:antialiased;}
 section{width:100%; position:relative;}
 section:nth-of-type(odd){background:#e2e2e2;}
     section:nth-of-type(odd) header{color:white;}
@@ -12,9 +12,22 @@ section:nth-of-type(even){background:white;}
 header{margin:0px 20px; width:100%; height:auto; font-size:120px; font-family: "nimbus-sans",sans-serif;  font-weight:bold; text-align:center;}
 
 
+/*NavBar*/
+nav.main{position:fixed; display:none; top:0px; width:100%; height:auto; background:#334D5C; z-index:1000;}
+nav.main ul{padding-right:10px;}
+nav ul li{display:inline-block;}
+nav ul li a{display:block; padding:10px 5px; font-size:18px; line-height:20px; color:white;}
+nav ul li a:hover{color:white;}
+.navbar-brand{padding:10px 5px; color:white;}
+.navbar-brand:hover{color:white;}
+@media screen and (max-width:486px){
+    nav ul li a{font-size:12px;}
+}
+
 /*Top Section*/
-#left{position:relative; width:40%; height:100%; background:#cdcdcd;}
-    #menu{height:80%; position:relative; top:10%; right:10%; width:250px;}
+#top .container-fluid, #top .row{height:100%; position:relative; margin:0px;}
+#left{position:relative; height:100%; background:#cdcdcd;}
+    #menu{height:80%; top:10%; position:relative; width:250px; margin:0 auto 0 auto;}
     #menu ul,li{text-indent:none; margin:0px !important;}
     #menu ul{height:100%;
             display:-moz-box; display:-ms-flexbox; display:-webkit-flex; display:flex;  
@@ -22,12 +35,12 @@ header{margin:0px 20px; width:100%; height:auto; font-size:120px; font-family: "
             -webkit-justify-content:space-around; justify-content:space-around;}
     .menuitem{width:100%; height:45px; background:#b7b7b7;}
         .menuitem a{height:100%; border-radius:0px !important; transition:background .2s ease;}
-#right{position:relative; width:60%; height:100%; background:#e2e2e2;}
-    #logo{position:relative; left:15%; width:450px; height:230px; margin-top:125px; background:url(../img/logo.png);}
-    #logo .menuitem{position:absolute; width:250px; left:100px; bottom:-60px;}
-
-/*NavBar*/
-.navbar{display:none; position:fixed; top:10px; width:100%; background:white; border-radius:0px;}
+#right{position:relative; background:#e2e2e2;}
+    #logo img{width:450px; height:230px; display:block; margin:145px auto 0 auto;}
+    @media screen and (max-width:486px){
+        #top{height:350px;}
+        #logo img{width:80%; height:auto; margin-top:100px;}
+    }
 
 /*Team Section*/
 #team header span{position:relative; top:-20px;}
@@ -63,7 +76,8 @@ footer div{text-align:center; color:#e2e2e2; font-size:80px; font-family: "nimbu
 .diamond{-moz-box-shadow: 1px 0px 1px 0px #000; -webkit-box-shadow: 1px 0px 1px 0px #000; box-shadow: 1px 0px 1px 0px #000;}
 
 /*Member Info Styles*/
-#memberinfo{display:none;}
+#memberinfo{display:none; height:100px; position:relative;}
+#memberinfo .close{position:absolute; top:0px; right:0px;}
 
 /*Diamond Styles*/
 
@@ -84,7 +98,7 @@ footer div{text-align:center; color:#e2e2e2; font-size:80px; font-family: "nimbu
 
     /*diamond style*/
     .diamond{
-            position:relative; height:165px; width:165px;
+            position:relative; height:165px; width:165px; -webkit-backface-visibility:hidden; 
             background:url(../img/profiles.jpg) #808080; 
             color:white;
             margin:35px 35px 0px 38px;
@@ -96,6 +110,8 @@ footer div{text-align:center; color:#e2e2e2; font-size:80px; font-family: "nimbu
             transition:all .4s ease;
             cursor:pointer;
             }
+    .diamond.active{pointer-events:none;}
+    .diamond.active .diamondcontent{opacity:1;}
 
     /*inner diamond content style*/
     .diamondcontent{
@@ -121,9 +137,10 @@ footer div{text-align:center; color:#e2e2e2; font-size:80px; font-family: "nimbu
     .diamondcontent span:nth-of-type(2){font-size:14px;}
 
     /*hover state*/
+    .diamond:hover{color:white; text-decoration:none;}
     .diamond:hover .diamondcontent{opacity:1;}
 
-    /*establish background sprites*/
+    /*establish background sprites for members*/
     .alex{background-position:0px 0px;}
     .coulton{background-position:0px -165px;}
     .jake{background-position:0px -330px;}
@@ -135,3 +152,11 @@ footer div{text-align:center; color:#e2e2e2; font-size:80px; font-family: "nimbu
     .maggie{background-position:0px -1320px;}
     .drew{background-position:0px -1485px;}
 
+
+/*Page Breaks*/
+@media screen and (max-width:768px){
+    /*NavBar*/
+    nav.main{display:block !important;} 
+}
+
+/*Helper Classes*/
